@@ -49,11 +49,7 @@ def enigma(mensagem, matriz_permutacao, matriz_auxiliar):
         mensagem_cripto += letra_cripto
         contador += 1
     return mensagem_cripto
-        
-
     
-        
-        
 
 def de_enigma(mensagem_encriptada, matriz_permutacao, matriz_auxiliar):
     mensagem_original = ""
