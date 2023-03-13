@@ -4,7 +4,6 @@ import numpy as np
 def to_one_hot(message):
     if len(message) < 1:
         raise ValueError("Empty message")
-
     message = message.lower()
     alphabet = "abcdefghijklmnopqrstuvwxyz "
     counter = 0
