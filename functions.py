@@ -2,17 +2,24 @@ import numpy as np
 import numpy as np
 
 def to_one_hot(message):
+    if len(message) < 1:
+        raise ValueError("Empty message")
+
+    message = message.lower()
     alphabet = "abcdefghijklmnopqrstuvwxyz "
     counter = 0
     for char in message:
-        vector = np.array([0 for i in range(27)])
-        vector[alphabet.index(char)] = 1
-        if counter == 0:
-            previous_vector = vector
+        if char in alphabet:
+            vector = np.array([0 for i in range(27)])
+            vector[alphabet.index(char)] = 1
+            if counter == 0:
+                previous_vector = vector
+            else:
+                matrix = np.column_stack((previous_vector, vector))
+                previous_vector = matrix
+            counter += 1
         else:
-            matrix = np.column_stack((previous_vector, vector))
-            previous_vector = matrix
-        counter += 1
+            raise ValueError("Character not in valid alphabet")
     if counter == 1:
         return previous_vector.reshape(27, 1)
     return previous_vector

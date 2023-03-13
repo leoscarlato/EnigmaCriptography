@@ -32,3 +32,22 @@ A função retorna a mensagem criptografada como uma string.
 Esta função descriptografa uma mensagem criptografada com a função ***enigma_machine()***. A mensagem criptografada é descriptografada várias vezes usando a matriz auxiliar especificada e, em seguida, é descriptografada usando a matriz de permutação inversa especificada na função ***decrypt()***.
 
 A função retorna a mensagem original como uma string.
+
+### Instruções 
+Primeiros passos
+
+- 1. criar um ambiente virtual 
+
+- 2. instalar as dependências 
+- 2.1 $ pip install Flask
+- 2.2 $ pip install enigmamachine **biblioteca**
+
+[Site da biblioteca com a documentação da funções](https://pypi.org/project/enigmamachine/)
+
+- 3. rodar o arquivo app.py 
+- rodar o próprio arquivo ou com o terminal na raiz do projeto inserir o comando $ flask run 
+
+- 4. demo.ipynb
+arquivo com teste: das funções, da api e da biblioteca
+
+- 5. Teste rápidos no último campo da demo
